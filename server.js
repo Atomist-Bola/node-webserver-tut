@@ -3,6 +3,8 @@ console.log('Starting server.js');
 var fs = require('fs');
 var express = require('express');
 var hbs = require('hbs');
+
+const port = process.env.PORT || 3000;
 hbs.registerPartials('/Users/bincom/Desktop/project/Bolanle/node/nodeServers/views/partials'); 
 hbs.registerHelper('getYear', ()=>{
     return new Date().getFullYear();
@@ -58,6 +60,6 @@ app.get('/about', (req, res)=>{
     });
 })
 
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000')
+app.listen(port, ()=>{
+    console.log(`Server is up on port ${port}`)
 })
