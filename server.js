@@ -58,6 +58,10 @@ app.get('/about', (req, res)=>{
         title: 'About Page'
        
     });
+});
+
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs');
 })
 
 app.listen(port, ()=>{
